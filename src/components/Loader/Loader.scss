@@ -1,0 +1,40 @@
+@import '../../styles/_fonts.scss';
+@import '../../styles/_colors.scss';
+
+.loader__container {
+  font-family: $font-author;
+  letter-spacing: 3px;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: $color-black;
+  color: red;
+  animation-name: loaderAnimation;
+  animation-duration: 4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  scroll-snap-align: center;
+  text-align: center;
+  &--title {
+    font-size: $font-size-text-big;
+  }
+  &--text {
+    font-family: $font-body;
+  }
+}
+
+@keyframes loaderAnimation {
+  0% {
+    color: #a8d3d7;
+  }
+  25% {
+    color: #feab30;
+  }
+  50% {
+    color: #e6a9b2;
+  }
+  100% {
+    color: black;
+  }
+}

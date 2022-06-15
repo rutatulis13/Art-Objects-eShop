@@ -1,0 +1,81 @@
+@import '../../styles/_fonts.scss';
+@import '../../styles/_colors.scss';
+
+.modal {
+  width: 300px;
+  height: auto;
+  position: fixed;
+  z-index: 22;
+  background-color: $color-latte-modal;
+  border: 1px solid black;
+  top: 60px;
+  right: 60px;
+  font-size: $font-size-text-big;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: $font-author;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px 5px 30px;
+    border-bottom: 0.5px solid black;
+    margin-bottom: 20px;
+    &--actions {
+      display: flex;
+      font-size: 30px;
+    }
+    &--plus {
+      padding-right: 20px;
+    }
+    &--minus {
+      padding: 0 20px;
+    }
+    &--items-buy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 20px;
+      font-weight: $font-weight-light;
+    }
+  }
+  &__close-btn {
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    font-size: $font-size-text-big;
+    font-family: $font-author;
+    right: 0px;
+    cursor: pointer;
+    padding-bottom: 40px;
+  }
+  &__buy-btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: $color-black;
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+    right: 0px;
+    font-family: $font-author;
+    font-size: $font-size-text-big;
+    font-weight: $font-weight-light;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .modal {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .modal {
+    width: 270px;
+  }
+}

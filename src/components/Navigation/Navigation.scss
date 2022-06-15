@@ -1,0 +1,156 @@
+@import '../../styles/_fonts.scss';
+@import '../../styles/_colors.scss';
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  font-size: $font-size-text;
+  cursor: pointer;
+  text-decoration: none;
+  // position: relative;
+  // display: inline-block;
+  z-index: 1;
+  // .header__container--menu:hover {
+  //   //   cursor: url(rename.png) 2 2, pointer;
+  //   transition: cursor 2s linear;
+  // }
+  // .header__container--menu::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   transform: scaleX(0);
+  //   height: 1px;
+  //   bottom: 0em;
+  //   left: 0em;
+  //   background-color: #000000;
+  //   transform-origin: bottom right;
+  //   transition: transform 0.4s ease-out;
+  //   margin: 0 30px;
+  // }
+  // .header__container--menu:hover::after {
+  //   transform: scaleX(1);
+  //   transform-origin: bottom left;
+  //   margin: 0 30px;
+  // }
+  &--menu {
+    margin-left: 30px;
+    // color: $color-black;
+  }
+  &--logo {
+    // left: 50%;
+    font-family: $font-author;
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+  &--cart {
+    margin-right: 20px;
+  }
+  &--cart-section {
+    display: flex;
+    padding-right: 20px;
+  }
+}
+
+#logoId {
+  display: none;
+}
+
+.mark:hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.mark:hover {
+  //   cursor: url(rename.png) 2 2, pointer;
+  transition: cursor 2s linear;
+}
+.mark::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0em;
+  left: 0em;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.mark:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// .header__container a {
+//   text-decoration: none;
+//   position: relative;
+//   display: inline-block;
+//   z-index: 1;
+// }
+// .header__container a:hover {
+//   //   cursor: url(rename.png) 2 2, pointer;
+//   transition: cursor 2s linear;
+// }
+// .header__container a::after {
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+//   transform: scaleX(0);
+//   height: 1px;
+//   bottom: 0em;
+//   left: 0em;
+//   background-color: #000000;
+//   transform-origin: bottom right;
+//   transition: transform 0.4s ease-out;
+// }
+// .header__container a:hover::after {
+//   transform: scaleX(1);
+//   transform-origin: bottom left;
+// }
+
+.header__container .mobile {
+  display: none;
+}
+@media screen and (max-width: 1400px) {
+  .header__container--logo {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  #logoId {
+    display: inline-block;
+    font-size: $font-size-text-XS;
+  }
+  .nav {
+    display: none;
+  }
+  #logoId-2 {
+    display: none;
+  }
+  .number {
+    font-size: $font-size-text-XS;
+  }
+  .header__container {
+    &--menu {
+      font-size: $font-size-text-XS;
+    }
+    &--cart {
+      font-size: $font-size-text-XS;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__container .desk {
+    display: none;
+  }
+  .header__container .mobile {
+    display: block;
+  }
+}

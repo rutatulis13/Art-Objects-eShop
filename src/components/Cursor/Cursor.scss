@@ -1,0 +1,28 @@
+@import '../../styles/_colors.scss';
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid $color-black;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: all 100ms ease;
+  transition-property: opacity;
+}
+
+.c--hidden {
+  opacity: 0;
+}
+
+// html,
+// body {
+//   cursor: none;
+// }
+// html *,
+// body * {
+//   cursor: none;
+// }
+html {
+  scroll-behavior: smooth;
+}

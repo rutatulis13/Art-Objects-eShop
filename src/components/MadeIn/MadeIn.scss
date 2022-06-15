@@ -1,0 +1,24 @@
+@import '../../styles/_colors.scss';
+@import '../../styles/_fonts.scss';
+
+.made {
+  font-size: 1vw;
+  text-align: center;
+  line-height: 50%;
+  margin-top: 150px;
+}
+
+.new-york {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16vw;
+  text-align: center;
+  line-height: 80%;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  .made {
+    margin-top: 50px;
+    font-size: $font-size-text-XS;
+  }
+}

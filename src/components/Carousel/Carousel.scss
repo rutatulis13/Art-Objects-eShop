@@ -1,0 +1,59 @@
+.vase {
+  transition: transform 3s;
+}
+.zoomImg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.zoom {
+  width: 3000px;
+}
+.cont {
+  width: 3000px;
+}
+
+.gallery-carousel {
+  margin: 50px -30px 50px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.zoomImg::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.zoomImg {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.products-obj,
+.products-drag {
+  margin-right: 60px;
+  margin-left: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.products-obj {
+  margin-top: 150px;
+}
+
+@media screen and (max-width: 720px) {
+  .products-obj {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .products-obj,
+  .products-drag {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .gallery-carousel {
+    margin: 10px 0;
+  }
+}
