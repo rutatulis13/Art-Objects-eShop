@@ -14,18 +14,18 @@ const Layout = () => {
     setArr((c) => c.filter((b) => b.id !== id))
   }
 
-  useEffect(() => {
-    let l = localStorage.getItem('cart')
-    if (null === l) {
-      l = JSON.stringify([])
-    }
-    l = JSON.parse(l)
-    setArr(new Set(l))
-  }, [])
+  // useEffect(() => {
+  //   let l = localStorage.getItem('cart')
+  //   if (null === l) {
+  //     l = JSON.stringify([])
+  //   }
+  //   l = JSON.parse(l)
+  //   setArr(new Set(l))
+  // }, [])
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify([...arr]))
-  }, [arr])
+  // useEffect(() => {
+  //   localStorage.setItem('cart', JSON.stringify([...arr]))
+  // }, [arr])
 
   const obj = {
     arr: arr,
