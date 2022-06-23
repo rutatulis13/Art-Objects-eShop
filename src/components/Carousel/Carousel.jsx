@@ -11,37 +11,34 @@ function Carousel() {
     setImgId(number)
   }
 
-  useEffect(() => {
-    let l = localStorage.getItem('vaseLikes')
-    if (null === l) {
-      l = JSON.stringify([])
-    }
-    l = JSON.parse(l)
-    setLikes(new Set(l))
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('vaseLikes', JSON.stringify([...likes]))
-  }, [likes])
-
   const likeButtonPressed = (id) => {
     const likesCopy = new Set(likes)
     likesCopy.has(id) ? likesCopy.delete(id) : likesCopy.add(id)
     setLikes(likesCopy)
   }
 
+  useEffect(() => {
+    let l = localStorage.getItem('likes')
+    l = JSON.parse(l)
+    setLikes(new Set(l))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('likes', JSON.stringify([...likes]))
+  }, [likes])
+
   return (
     <React.Fragment>
-      <div className="products-obj" id="featured">
+      <div className="products" id="featured">
         <span className="horisontal" id="horisontal">
-          FEATURED
+          featured
         </span>
         <span className="horisontal" id="horisontal">
-          VIEW ALL OBJECTS
+          view all objects
         </span>
       </div>
-      <div className="gallery-carousel" data-aos="fade-up">
-        <div className="zoomImg">
+      <div className="carousel" data-aos="fade-up">
+        <div className="carousel__zoom">
           <CarouselImages
             showNum={showNum}
             likeButtonPressed={likeButtonPressed}
@@ -49,11 +46,11 @@ function Carousel() {
           />
         </div>
       </div>
-      <div className="products-drag">
+      <div className="drag">
         <span className="horisontal" id="horisontal">
-          DRAG
+          drag
         </span>
-        <span className="num-carousel" id="horisontal-1">
+        <span className="carousel-img" id="horisontal-1">
           {imgId}/{img.length}
         </span>
       </div>

@@ -12,37 +12,11 @@
   font-size: $font-size-text;
   cursor: pointer;
   text-decoration: none;
-  // position: relative;
-  // display: inline-block;
   z-index: 1;
-  // .header__container--menu:hover {
-  //   //   cursor: url(rename.png) 2 2, pointer;
-  //   transition: cursor 2s linear;
-  // }
-  // .header__container--menu::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100%;
-  //   transform: scaleX(0);
-  //   height: 1px;
-  //   bottom: 0em;
-  //   left: 0em;
-  //   background-color: #000000;
-  //   transform-origin: bottom right;
-  //   transition: transform 0.4s ease-out;
-  //   margin: 0 30px;
-  // }
-  // .header__container--menu:hover::after {
-  //   transform: scaleX(1);
-  //   transform-origin: bottom left;
-  //   margin: 0 30px;
-  // }
   &--menu {
     margin-left: 30px;
-    // color: $color-black;
   }
   &--logo {
-    // left: 50%;
     font-family: $font-author;
     letter-spacing: 3px;
     font-size: 14px;
@@ -64,9 +38,7 @@
   position: relative;
   cursor: pointer;
 }
-
 .mark:hover {
-  //   cursor: url(rename.png) 2 2, pointer;
   transition: cursor 2s linear;
 }
 .mark::after {
@@ -85,34 +57,6 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-// .header__container a {
-//   text-decoration: none;
-//   position: relative;
-//   display: inline-block;
-//   z-index: 1;
-// }
-// .header__container a:hover {
-//   //   cursor: url(rename.png) 2 2, pointer;
-//   transition: cursor 2s linear;
-// }
-// .header__container a::after {
-//   content: '';
-//   position: absolute;
-//   width: 100%;
-//   transform: scaleX(0);
-//   height: 1px;
-//   bottom: 0em;
-//   left: 0em;
-//   background-color: #000000;
-//   transform-origin: bottom right;
-//   transition: transform 0.4s ease-out;
-// }
-// .header__container a:hover::after {
-//   transform: scaleX(1);
-//   transform-origin: bottom left;
-// }
-
 .header__container .mobile {
   display: none;
 }

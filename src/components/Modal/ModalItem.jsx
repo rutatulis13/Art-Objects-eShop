@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import './ModalItem.scss'
+import React, { useState } from 'react'
 
 function ModalItem({ b, cart, setCart, remove }) {
   const [amount, setAmount] = useState()
-
-  useEffect(() => {
-    setAmount(sum)
-  }, [])
 
   const addOne = () => {
     setAmount(() => sum + 1)
@@ -29,7 +24,7 @@ function ModalItem({ b, cart, setCart, remove }) {
         <span className="modal__content--plus" onClick={addOne}>
           +
         </span>
-        <span>{amount} </span>
+        <span>{sum} </span>
         <span className="modal__content--minus" onClick={minusOne}>
           -
         </span>

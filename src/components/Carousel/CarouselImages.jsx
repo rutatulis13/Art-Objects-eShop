@@ -1,9 +1,9 @@
 import React from 'react'
 import CarouselItem from './CarouselItem.jsx'
 import img from '../../constants/carousel.js'
-import './CarouselImages.scss'
 
 function CarouselImages({ showNum, likes, likeButtonPressed }) {
+  console.log(likes)
   return (
     <React.Fragment>
       {img.map((image, index) => (

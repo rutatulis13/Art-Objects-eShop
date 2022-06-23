@@ -7,13 +7,13 @@ function MadeIn() {
     Aos.init({ duration: 2000 })
   }, [])
   return (
-    <div className="made-in">
-      <div className="made">MADE IN</div>
-      <div className="new-york" data-aos="fade-right">
-        NEW YORK
+    <div className="origin">
+      <div className="origin__text--made">made in</div>
+      <div className="origin__text--new-york" data-aos="fade-right">
+        new york
       </div>
-      <div className="new-york" data-aos="fade-up">
-        CITY
+      <div className="origin__text--new-york" data-aos="fade-up">
+        city
       </div>
     </div>
   )

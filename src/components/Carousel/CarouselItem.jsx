@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './CarouselImages.scss'
+import './CarouselItem.scss'
 
 function CarouselItem({ image, showNum, likeButtonPressed, like }) {
   let newClass
@@ -46,8 +46,8 @@ function CarouselItem({ image, showNum, likeButtonPressed, like }) {
   }
 
   return (
-    <div className="image-carousel">
-      <div className="svg">
+    <div className="carousel-images">
+      <div className="carousel-images__icon">
         <svg
           onClick={() => likeButtonPressed(image.id)}
           className={like ? 'circle like' : 'circle'}
@@ -55,11 +55,11 @@ function CarouselItem({ image, showNum, likeButtonPressed, like }) {
           <use xlinkHref="#circle"></use>
         </svg>
       </div>
-      <div className="carousel-item" key={image.id}>
-        <div className="test">
+      <div className="carousel-images__item" key={image.id}>
+        <div className="carousel-images__item--container">
           <NavLink to={'/home/' + image.id}>
             <img
-              className="vase"
+              className="carousel-images--image"
               id={check}
               src={image.img}
               onMouseEnter={checking}

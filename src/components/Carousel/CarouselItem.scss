@@ -1,4 +1,71 @@
-// .carousel-item {
-//   display: flex;
-//   flex-direction: row;
-// }
+@import '../../styles/_colors.scss';
+@import '../../styles/_fonts.scss';
+
+.carousel-images {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    &--container {
+      overflow: hidden;
+    }
+  }
+  &--image {
+    width: 30vw;
+    height: auto;
+    scroll-snap-align: center;
+    transition: transform 3s;
+  }
+  &--image:hover {
+    transform: scale(1.5);
+    overflow: hidden;
+  }
+}
+
+img::after {
+  content: none !important;
+}
+
+#vase1 {
+  cursor: url(../../assets/vase-3_02.png) 2 2, pointer;
+}
+#vase2 {
+  cursor: url(../../assets/vase-4.png) 2 2, pointer;
+}
+#vase3 {
+  cursor: url(../../assets/vase-5_01.png) 2 2, pointer;
+}
+#vase4 {
+  cursor: url(../../assets/vase-6.png) 2 2, pointer;
+}
+#vase5 {
+  cursor: url(../../assets/vase-7.png) 2 2, pointer;
+}
+#vase6 {
+  cursor: url(../../assets/vase-8.png) 2 2, pointer;
+}
+
+.circle {
+  fill: #e9eceb;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.like {
+  fill: $color-pink;
+}
+
+@media screen and (max-width: 672px) {
+  .carousel-images--image {
+    width: 45vw;
+  }
+  .circle {
+    margin: 10px 0;
+    width: 20px;
+    height: 20px;
+  }
+}

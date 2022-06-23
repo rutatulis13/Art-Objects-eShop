@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Outlet } from 'react-router'
 import Navigation from '../Navigation/Navigation'
-import './Layout.scss'
 
 const Layout = () => {
   const [arr, setArr] = useState([])
@@ -14,18 +13,21 @@ const Layout = () => {
     setArr((c) => c.filter((b) => b.id !== id))
   }
 
-  // useEffect(() => {
-  //   let l = localStorage.getItem('cart')
-  //   if (null === l) {
-  //     l = JSON.stringify([])
-  //   }
-  //   l = JSON.parse(l)
-  //   setArr(new Set(l))
-  // }, [])
+  useEffect(() => {
+    let l = localStorage.getItem('cart')
+    if (null === l) {
+      l = JSON.stringify([])
+    }
+    l = JSON.parse(l)
+    console.log([...new Set(l.map(JSON.stringify))].map(JSON.parse))
+    setArr([...l])
+  }, [])
 
-  // useEffect(() => {
-  //   localStorage.setItem('cart', JSON.stringify([...arr]))
-  // }, [arr])
+  useEffect(() => {
+    if (arr.length) {
+      localStorage.setItem('cart', JSON.stringify([...arr]))
+    }
+  }, [arr])
 
   const obj = {
     arr: arr,

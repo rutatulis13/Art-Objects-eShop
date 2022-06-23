@@ -14,7 +14,7 @@ function Header() {
   const touchMenu = obj.touchMenu
 
   return (
-    <div className="header" data-aos="fade-down" id="menu">
+    <header className="header" data-aos="fade-down" id="menu">
       <div className="header__title-section">
         <div className="header__title-section--title">
           <div className="first-line safari_only1">
@@ -76,7 +76,7 @@ function Header() {
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

@@ -13,8 +13,6 @@
       white-space: nowrap;
       flex-direction: row;
       animation: scroll 120s linear infinite;
-    }
-    &--text {
       height: 80px;
       width: 100%;
       display: flex;
@@ -23,17 +21,15 @@
     }
     &--animated-text {
       text-transform: uppercase;
-      font-size: 3vw;
+      font-size: $font-size-logo;
       width: 100%;
-      padding: 0 50px;
+      padding-right: 30px;
     }
     &--lighter {
-      margin-left: -35px;
+      padding-right: 80px;
       font-family: $font-author;
-      font-size: 50px;
+      font-size: $font-size-text-L;
       text-transform: uppercase;
-      font-size: 3vw;
-      width: 100%;
     }
   }
 }
@@ -44,5 +40,20 @@
   }
   100% {
     transform: translateX(calc(-250px * 9));
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .autoplay-carousel__slider {
+    &--text {
+      height: 40px;
+      margin-top: -5px;
+    }
+    &--animated-text {
+      font-size: $font-size-text-S;
+    }
+    &--lighter {
+      font-size: 16px;
+    }
   }
 }

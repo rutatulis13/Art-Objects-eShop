@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos'
 import vase1 from '../../assets/vase-1.jpg'
-import vase2 from '../../assets/vase-2.jpg'
-import './About.scss'
 import About from './About'
+import vase2 from '../../assets/vase-2.jpg'
+import './AboutSection.scss'
 
 function AboutSection() {
   useEffect(() => {

@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import ProductItem from './ProductItem'
 import { useOutletContext } from 'react-router'
 import img from '../../constants/carousel'
-// import Cursor from '../Cursor/Cursor'
 import './Product.scss'
 
 function Product() {
@@ -34,7 +33,6 @@ function Product() {
 
   return (
     <div className="product" data-aos="fade-bottom">
-      {/* <Cursor /> */}
       <ProductItem
         img={findImg}
         arr={array}

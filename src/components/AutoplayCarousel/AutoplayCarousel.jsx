@@ -13,6 +13,9 @@ function AutoplayCarousel() {
               <div className="autoplay-carousel__slider--animated-text">
                 <span>{t.text}</span>
               </div>
+              <div className="autoplay-carousel__slider--animated-text dash">
+                <span>{t.dash}</span>
+              </div>
               <div className="autoplay-carousel__slider--lighter">
                 <span>{t.textLighter}</span>
               </div>

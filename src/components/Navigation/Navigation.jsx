@@ -5,7 +5,7 @@ import './Navigation.scss'
 import Aos from 'aos'
 import Modal from '../Modal/Modal'
 
-function Navigation({ num, setArr, remove, setTouchMenu, menu, link }) {
+function Navigation({ num, setArr, remove, setTouchMenu, menu, link, test2 }) {
   useEffect(() => {
     Aos.init({ duration: 2000 })
   }, [])
@@ -55,6 +55,7 @@ function Navigation({ num, setArr, remove, setTouchMenu, menu, link }) {
             setCart={setArr}
             modal={modal}
             setModal={setModal}
+            test2={test2}
           />
         ) : null}
       </div>

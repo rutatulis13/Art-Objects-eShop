@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './ProductItem.scss'
 
 function ProductItem({
@@ -46,30 +46,9 @@ function ProductItem({
     checkId()
   }
 
-  // const likeButtonPressed = (id) => {
-  //   const likesCopy = new Set(arr)
-  //   likesCopy.has(id) ? likesCopy.delete(id) : likesCopy.add(id)
-  //   setArr(likesCopy)
-  // }
-
   const addItem = () => {
     setArr((item) => [...item, img])
   }
-
-  // useEffect(() => {
-  //   JSON.parse(localStorage.getItem('cart'))
-  // }, [])
-
-  // useEffect(() => {
-  //   localStorage.setItem('cart', JSON.stringify([arr]))
-  // }, [arr])
-
-  // const addItem = (id) => {
-  //   const copy = new Set(arr)
-  //   copy.has(id) ? copy.delete(id) : copy.add(id)
-  //   //   setArr(likesCopy)
-  //   setArr((copy) => [...copy, img])
-  // }
 
   console.log(arr)
 

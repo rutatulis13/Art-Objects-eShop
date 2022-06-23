@@ -5,11 +5,10 @@
   &__container {
     padding-top: 30%;
   }
-}
-
-.mobile-navigation__item {
-  margin-top: 20px;
-  font-size: 40px;
+  &__item {
+    margin-top: 20px;
+    font-size: 40px;
+  }
 }
 
 .mark:hover {

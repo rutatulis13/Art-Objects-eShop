@@ -7,7 +7,7 @@
   font-size: 40px;
   text-transform: uppercase;
   color: $color-black;
-  color: red;
+  color: $color-red;
   animation-name: loaderAnimation;
   animation-duration: 4s;
   position: absolute;
@@ -26,15 +26,15 @@
 
 @keyframes loaderAnimation {
   0% {
-    color: #a8d3d7;
+    color: $color-blue;
   }
   25% {
-    color: #feab30;
+    color: $color-orange;
   }
   50% {
-    color: #e6a9b2;
+    color: $color-pink;
   }
   100% {
-    color: black;
+    color: $color-black;
   }
 }
